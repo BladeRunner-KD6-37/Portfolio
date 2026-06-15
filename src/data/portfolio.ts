@@ -12,27 +12,25 @@ export const portfolio = {
     Languages:  ["JavaScript", "TypeScript", "Python", "C++", "C", "Latex","Markdown"],
     // Frontend:   ["React", "Next.js", "Tailwind CSS", "HTML", "SHADCN/UI"],
     // Backend:    ["Node.js", "RESTAPI", "MySql","PostgreSQL", "NODEMON", "ZOD"],
-    // Tools:      ["Git", "Docker", "Linux" "Nodemon"],
     Hosting: ["Render", "Vercel", "Netlify", "AWS"],
     PackageManager: ["Bun", "npm"],
     Frameworks: ["Next.js", "Tailwind CSS", "Express"],
     Library : ["SHADCN/UI", "React.js", "Zod"],
-    
-
+    Tools:      ["Git", "Github","Github Copilot", "Linux", "Postman", "Canva"]
   },
 
   projects: [
     {
-      name: "TermFolio",
-      description: "Terminal-style portfolio website",
-      tech: "Next.js / Tailwind",
-      link: "https://github.com/you/termfolio",
+      name: "Meta Runtime",
+      description: "creates app from JSON config",
+      tech: "TypeScript / Node.js / Next.js / React / Express.js / Prisma / PostgreSQL (Neon) / Redis / Tailwind CSS / Radix UI / Lucide React / TanStack Query / Zustand / Zod / JWT Authentication / bcryptjs / WebSockets / Nodemailer / dotenv / CORS / ESLint",
+      link: "https://ai-app-generator-tan-delta.vercel.app/",
     },
     {
-      name: "PyTasker",
-      description: "CLI task manager in Python",
+      name: "AI Invoice App",
+      description: "Generatesn",
       tech: "Python / SQLite",
-      link: "https://github.com/you/pytasker",
+      link: "https://ai-app-generator-tan-delta.vercel.app/",
     },
   ],
 
