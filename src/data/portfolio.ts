@@ -28,26 +28,32 @@ export const portfolio = {
     },
     {
       name: "AI Invoice App",
-      description: "Generatesn",
-      tech: "Python / SQLite",
-      link: "https://ai-app-generator-tan-delta.vercel.app/",
+      description: "AI powered Invoice Generator",
+      tech: "React/Node.js/Express.js/MongoDB/TailwindCSS/Clerk/Gemini API",
+      link: "https://a-invoice-shen-e18izup1q-highoncaffienes-projects.vercel.app/",
+    },
+    {
+      name: "K72",
+      description: "AI powered Invoice Generator",
+      tech: "React/GSAP/TailwindCSS",
+      link: "https://k72-omega-ashy.vercel.app/",
     },
   ],
 
-  experience: [
-    {
-      role: "Software Engineer Intern",
-      company: "Acme Corp",
-      period: "2024 – present",
-      description: "Built internal tooling with React + FastAPI",
-    },
-  ],
+  // experience: [
+  //   {
+  //     role: "Software Engineer Intern",
+  //     company: "Acme Corp",
+  //     period: "2024 – present",
+  //     description: "Built internal tooling with React + FastAPI",
+  //   },
+  // ],
 
   education: [
     {
-      degree: "B.Tech Computer Science",
-      school: "Your University",
-      year: "2021 – 2025",
+      degree: "Bachelor of Technology in Computer Science and Engineering",
+      college: "Indian Insitute of Information Technology Ranchi",
+      year: "2024 – 2028",
     },
   ],
 };
