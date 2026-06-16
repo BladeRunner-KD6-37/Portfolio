@@ -7,7 +7,7 @@ import "./globals.css";
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Your Name — Portfolio",
+  title: "Portfolio",
   description: "Terminal-style developer portfolio",
 };
 
