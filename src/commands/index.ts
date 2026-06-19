@@ -14,7 +14,7 @@ export const commands: Record<string, () => CommandOutput> = {
       { text: "about        — Who I am",           color: "cyan" },
       { text: "skills       — My tech stack",       color: "cyan" },
       { text: "projects     — Things I've built",   color: "cyan" },
-      { text: "experience   — Work history",        color: "cyan" },
+      // { text: "experience   — Work history",        color: "cyan" },
       { text: "education    — Academic background", color: "cyan" },
       { text: "contact      — Get in touch",        color: "cyan" },
       { text: "resume       — View my resume",      color: "cyan" },
