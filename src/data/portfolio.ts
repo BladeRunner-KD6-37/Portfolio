@@ -24,7 +24,7 @@ export const portfolio = {
       name: "Meta Runtime",
       description: "creates app from JSON config",
       tech: "TypeScript / Node.js / Next.js / React / Express.js / Prisma / PostgreSQL (Neon) / Redis / Tailwind CSS / Radix UI / Lucide React / TanStack Query / Zustand / Zod / JWT Authentication / bcryptjs / WebSockets / Nodemailer / dotenv / CORS / ESLint",
-      link: "https://ai-app-generator-tan-delta.vercel.app/",
+      link: "https://ai-app-generator-imx0az19h-highoncaffienes-projects.vercel.app/",
     },
     {
       name: "AI Invoice App",
