@@ -59,16 +59,16 @@ export const commands: Record<string, () => CommandOutput> = {
     return { lines };
   },
 
-  "experience": () => {
-    const lines: CommandOutput["lines"] = [{ text: "" }, { text: "Experience", color: "green" }, { text: "" }];
-    portfolio.experience.forEach((e) => {
-      lines.push({ text: `  ${e.role} @ ${e.company}`, color: "yellow" });
-      lines.push({ text: `  ${e.period}`, color: "cyan" });
-      lines.push({ text: `  ${e.description}` });
-      lines.push({ text: "" });
-    });
-    return { lines };
-  },
+  // "experience": () => {
+  //   const lines: CommandOutput["lines"] = [{ text: "" }, { text: "Experience", color: "green" }, { text: "" }];
+  //   portfolio.experience.forEach((e) => {
+  //     lines.push({ text: `  ${e.role} @ ${e.company}`, color: "yellow" });
+  //     lines.push({ text: `  ${e.period}`, color: "cyan" });
+  //     lines.push({ text: `  ${e.description}` });
+  //     lines.push({ text: "" });
+  //   });
+  //   return { lines };
+  // },
 
   "resume": () => ({
     lines: [

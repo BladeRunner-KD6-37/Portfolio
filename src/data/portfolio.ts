@@ -47,14 +47,14 @@ export const portfolio = {
 
   resume: "https://www.linkedin.com/in/ayush-kumar-991b92324/",
 
-  experience: [
-    {
-      role: "Software Engineer Intern",
-      company: "Acme Corp",
-      period: "2024 – present",
-      description: "Built internal tooling with React + FastAPI",
-    },
-  ],
+  // experience: [
+  //   {
+  //     role: "Software Engineer Intern",
+  //     company: "Acme Corp",
+  //     period: "2024 – present",
+  //     description: "Built internal tooling with React + FastAPI",
+  //   },
+  // ],
 
   education: [
     {
