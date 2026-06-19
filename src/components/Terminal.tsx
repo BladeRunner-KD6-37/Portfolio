@@ -32,6 +32,17 @@ export default function Terminal() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [lines, loading]);
 
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      setLines((prev) => {
+        if (prev.some((l) => l.text === "Tap a command below or type your own.")) {
+          return prev;
+        }
+        return [...prev, { text: "Tap a command below or type your own.", color: "dim" }];
+      });
+    }
+  }, []);
+
   function push(...newLines: Line[]) {
     setLines((prev) => [...prev, ...newLines]);
   }
@@ -172,19 +183,56 @@ export default function Terminal() {
         ))}
         {loading && <div className="text-yellow-300 animate-pulse">⟳ Running...</div>}
 
+        {/* Mobile shortcuts */}
+        <div className="md:hidden flex gap-2 overflow-x-auto pb-2 pt-1 mb-1 shrink-0 mobile-shortcuts-container select-none">
+          <style dangerouslySetInnerHTML={{__html: `
+            .mobile-shortcuts-container::-webkit-scrollbar {
+              display: none;
+            }
+          `}} />
+          {["about", "skills", "projects", "experience", "contact", "resume", "help"].map((cmd) => (
+            <button
+              key={cmd}
+              onClick={(e) => {
+                e.stopPropagation();
+                handle(cmd);
+              }}
+              className="px-2.5 py-1 bg-[#161b22] hover:bg-zinc-800 active:bg-zinc-700 text-cyan-400 rounded border border-zinc-800 text-xs font-mono shrink-0 transition-colors cursor-pointer select-none focus:outline-none focus:ring-1 focus:ring-green-400 flex items-center"
+            >
+              <span className="text-zinc-500 mr-1 select-none">$</span>
+              <span>{cmd}</span>
+            </button>
+          ))}
+        </div>
+
         {/* inline prompt */}
         <div className="flex items-center mt-1">
-          <span className="text-green-400 mr-2">visitor@portfolio:~$</span>
+          <span className="text-green-400 mr-2 shrink-0">visitor@portfolio:~$</span>
           <input
             ref={inputRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={onKey}
-            className="flex-1 bg-transparent outline-none border-none text-zinc-100 caret-green-400"
+            className="flex-1 bg-transparent outline-none border-none text-zinc-100 caret-green-400 min-w-0"
             autoFocus
             spellCheck={false}
             autoComplete="off"
           />
+          {/* Mobile Enter Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              const val = input;
+              setInput("");
+              handle(val);
+              inputRef.current?.focus();
+            }}
+            className="md:hidden ml-2 px-3 py-1 bg-[#161b22] hover:bg-zinc-800 active:bg-zinc-700 text-green-400 rounded border border-zinc-800 font-mono text-xs font-bold cursor-pointer shrink-0 transition-colors select-none focus:outline-none focus:ring-1 focus:ring-green-400 flex items-center gap-1"
+            aria-label="Execute command"
+          >
+            <span>Run</span>
+            <span className="text-[10px] opacity-75">↵</span>
+          </button>
         </div>
         <div ref={bottomRef} />
       </div>

@@ -14,9 +14,10 @@ export const commands: Record<string, () => CommandOutput> = {
       { text: "about        — Who I am",           color: "cyan" },
       { text: "skills       — My tech stack",       color: "cyan" },
       { text: "projects     — Things I've built",   color: "cyan" },
-    //   { text: "/experience   — Work history",        color: "cyan" },
+      { text: "experience   — Work history",        color: "cyan" },
       { text: "education    — Academic background", color: "cyan" },
       { text: "contact      — Get in touch",        color: "cyan" },
+      { text: "resume       — View my resume",      color: "cyan" },
       { text: "run <lang>   — Execute JavaScript code", color: "cyan" },
       { text: "clear        — Clear the terminal",  color: "cyan" },
       { text: "" },
@@ -59,16 +60,27 @@ export const commands: Record<string, () => CommandOutput> = {
     return { lines };
   },
 
-//   "/experience": () => {
-//     const lines: CommandOutput["lines"] = [{ text: "" }, { text: "Experience", color: "green" }, { text: "" }];
-//     portfolio.experience.forEach((e) => {
-//       lines.push({ text: `  ${e.role} @ ${e.company}`, color: "yellow" });
-//       lines.push({ text: `  ${e.period}`, color: "cyan" });
-//       lines.push({ text: `  ${e.description}` });
-//       lines.push({ text: "" });
-//     });
-//     return { lines };
-//   },
+  "experience": () => {
+    const lines: CommandOutput["lines"] = [{ text: "" }, { text: "Experience", color: "green" }, { text: "" }];
+    portfolio.experience.forEach((e) => {
+      lines.push({ text: `  ${e.role} @ ${e.company}`, color: "yellow" });
+      lines.push({ text: `  ${e.period}`, color: "cyan" });
+      lines.push({ text: `  ${e.description}` });
+      lines.push({ text: "" });
+    });
+    return { lines };
+  },
+
+  "resume": () => ({
+    lines: [
+      { text: "" },
+      { text: "Resume", color: "green" },
+      { text: "" },
+      { text: `  You can view my resume here:`, color: "white" },
+      { text: `  ${portfolio.resume}`, color: "cyan" },
+      { text: "" },
+    ],
+  }),
 
   "education": () => {
     const lines: CommandOutput["lines"] = [{ text: "" }, { text: "Education", color: "green" }, { text: "" }];
