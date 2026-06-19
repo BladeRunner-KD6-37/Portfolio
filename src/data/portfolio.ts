@@ -7,6 +7,11 @@ export const portfolio = {
   email: "ayushkumar.2024ug1009@iiitranchi.ac.in",
   github: "https://github.com/BladeRunner-KD6-37",
   linkedin: "https://www.linkedin.com/in/ayush-kumar-991b92324/",
+  bio: [
+    "I'm Ayush Kumar, a second-year B.Tech student at the Indian Institute of Information Technology, Ranchi, with a strong passion for web development and problem solving. I enjoy building clean, functional, and impactful digital experiences — from crafting intuitive frontends to engineering robust backend systems.",
+    "I'm currently seeking internship opportunities where I can apply my skills in a real-world environment, contribute meaningfully to a team, and continue growing as a developer. I thrive on challenges that push me to think critically and write better code.",
+    "If you're looking for a motivated developer who brings curiosity, dedication, and a willingness to learn — let's connect."
+  ],
 
   skills: {
     Languages:  ["JavaScript", "TypeScript", "Python", "C++", "C", "Latex","Markdown"],

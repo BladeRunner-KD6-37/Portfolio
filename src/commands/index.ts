@@ -29,12 +29,11 @@ export const commands: Record<string, () => CommandOutput> = {
   "about": () => ({
     lines: [
       { text: "" },
-      { text: `  ${portfolio.name}`, color: "yellow" },
-      { text: `  ${portfolio.title}`, color: "white" },
+      { text: portfolio.bio[0] },
       { text: "" },
-      { text: `  Location   ${portfolio.location}` },
-      { text: `  GitHub     ${portfolio.github}` },
-      { text: `  LinkedIn   ${portfolio.linkedin}` },
+      { text: portfolio.bio[1] },
+      { text: "" },
+      { text: portfolio.bio[2] },
       { text: "" },
     ],
   }),
