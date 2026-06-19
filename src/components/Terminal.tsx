@@ -78,7 +78,8 @@ export default function Terminal() {
     }
 
     // --- run command ---
-    const [base, ...rest] = cmd.split(" ");
+    const [rawBase, ...rest] = cmd.split(" ");
+    const base = rawBase.toLowerCase();
     const arg = rest.join(" ").toLowerCase();
 
     if (base === "run") {
@@ -104,7 +105,7 @@ export default function Terminal() {
       push(...fn().lines);
     } else {
       push({ text: "" });
-      push({ text: `command not found: ${base}`, color: "red" });
+      push({ text: `command not found: ${rawBase}`, color: "red" });
       push({ text: `type help to see available commands`, color: "dim" });
       push({ text: "" });
     }
@@ -144,7 +145,7 @@ export default function Terminal() {
       else { setHistIdx(next); setInput(history[next]); }
     } else if (e.key === "Tab") {
       e.preventDefault();
-      const match = COMMAND_KEYS.find((k) => k.startsWith(input));
+      const match = COMMAND_KEYS.find((k) => k.startsWith(input.toLowerCase()));
       if (match) setInput(match);
     }
   }
